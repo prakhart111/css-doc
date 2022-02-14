@@ -1,0 +1,252 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technincal Documentation</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="./three.r119.min.js"></script>
+<script src="./vanta.waves.min.js"></script>
+
+</head>
+<body>
+    <button id="openbtn" ><img id="svg-icon" src="./apps.svg"><div id="logo">CSS Documentation</div></button>
+    <nav id="navbar" class="hide">
+        <button id="closebtn"><img id="svg-icon" src="./cross.svg"></svg></button>
+        <header>CSS Documentation</header>
+        <ul>
+            <li> <a href="#Introduction" class="nav-link">Inroduction</a> </li>
+            <li> <a href="#CSS_Box_Model" class="nav-link">CSS Box Model</a> </li>
+            <li> <a href="#Positioning" class="nav-link">Positioning</a> </li>
+            <li> <a href="#CSS_Animations" class="nav-link">CSS Animations</a> </li>
+            <li> <a href="#CSS_FlexBox" class="nav-link">CSS FlexBox</a> </li>
+
+        </ul>
+    </nav><div class="cont"><a target="_blank" style="text-decoration:none" href="https://linktr.ee/prakhartandon">Connect with the Developer</a></div>
+    <div class="ball">PT</div>
+    <div id="getstarted">
+      <div>Welcome to the CSS Documentation</div>
+      
+      <button id="banner-btn">Start Your CSS Journey</button>
+    </div>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header>Introduction to CSS</header>
+          <article>
+            <p>
+              CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. 
+              Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to yellow:
+            </p>
+            <code>p {
+                color: yellow;
+              }
+            </code>
+            <p>
+              To link a CSS file to HTML page, we use link tags as shown.
+            </p>
+            <code> <p>< link href="style.css" rel="stylesheet"></p> </code>
+            <p style="color: rgb(233, 198, 147);">CSS selectors are used to "find" (or select) the HTML elements you want to style.
+              We can divide CSS selectors into five categories:</p>
+            <ul>
+              <li>Simple selectors (select elements based on name, id, class)              </li>
+              <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+              <li>Pseudo-class selectors (select elements based on a certain state)              </li>
+              <li>Pseudo-elements selectors (select and style a part of an element)</li>
+              <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+            </ul>
+            <p style="color: rgb(233, 198, 147);">Selecting Using ID</p>
+            <code>#para1 {
+              text-align: center;
+              color: blue;
+            }</code>
+            <p style="color: rgb(233, 198, 147);">In this example only div elements with class="box" will be blue and center-aligned:</p>
+            <code>div.box {
+              text-align: center;
+              color: blue;
+            }
+            </code>
+            <p>You can read more about <a href="https://dev.to/prakhart111/some-basics-of-css-that-you-should-have-a-look-at-part-1--42a2" class="nav-link">CSS basics Here</a></p>
+          </article>
+        </section>
+        <section class="main-section" id="CSS_Box_Model">
+          <header>CSS Box Model</header>
+          <article>
+            <p>In CSS, the term "box model" is used when talking about design and layout.
+              The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. </p>
+            <ul>
+              <li><strong style="color: rgb(233, 198, 147);">Content</strong> - The content of the box, where text and images appear.</li>
+              <li><strong style="color: rgb(233, 198, 147);">Padding</strong> - Clears an area around the content. The padding is transparent.</li>
+              <li><strong style="color: rgb(233, 198, 147);">Border</strong> - A border that goes around the padding and content</li>
+              <li><strong style="color: rgb(233, 198, 147);">Margin</strong> - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+            <p>Here's an example:</p>
+            <code>div {
+              width: 320px;
+              padding: 10px;
+              border: 5px solid gray;
+              margin: 0;
+            }</code>
+          </article>
+        </section>
+        <section class="main-section" id="Positioning">
+          <header>Positioning</header>
+          <article>
+            <p>
+              The default layout of elements as per their type as listed above is called the Normal Flow of a document
+We have position property of CSS to override the Normal flow.
+This pairs with the CSS offset properties (left,right,top,bottom) to set how many pixels(or any other unit) away the element has to be positioned from where it is in the Normal Flow.
+It accepts the following values.
+            </p>
+            <ul>
+              <li><p style="color:rgb(251, 202, 142)">position: static;</p>Static positioning is the default that every element gets. It just means "put the element into its normal position in the document flow — nothing special to see here."</li>
+              <li><p style="color:rgb(251, 202, 142)">position:relative;</p>This is very similar to static positioning, except that once the positioned element has taken its place in the normal flow, you can then modify its final position, including making it overlap other elements on the page. </li>
+              <li><p style="color:rgb(251, 202, 142)">position:absolute;</p>Rather than positioning the element based on its relative position within the normal document flow, they specify the distance the element should be from each of the containing element's sides.</li>
+              <li><p style="color:rgb(251, 202, 142)">position:fixed;</p>This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one), fixed positioning usually fixes an element in place relative to the visible portion of the viewport. </li>
+              <li><p style="color:rgb(251, 202, 142)">position: sticky;</p>This is basically a hybrid between relative and fixed position. It allows a positioned element to act like it's relatively positioned until it's scrolled to a certain threshold (e.g., 10px from the top of the viewport), after which it becomes fixed.</li>
+            </ul>
+            <header style="font-size:1.3em">Media Queries</header>
+            <p>They help you make your site responsive to different screen size.
+              The @media can be used to apply part of a style sheet based on the result of one or more media queries. With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.</p>
+            <code>@media screen and (min-width: 900px) {
+                div {
+                  width:100px;
+                 }
+              }
+            </code>
+            <p>
+              You can test your positioning skills <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Position_skills" class="nav-link">on this website.</a>
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="CSS_Animations">
+          <header>CSS Animations</header>
+          <article>
+            <p>
+              In order to animate an element, you need to add the Animation properties in its styling.
+The actual appearance of the animation is defined by the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" target="_blank" class="nav-link">@keyframe</a> rule.
+            </p>
+      
+            <p>
+              To create a CSS animation sequence, you style the element you want to animate with the animation property or its sub-properties.
+              This lets you configure the timing, duration, and other details of how the animation sequence should progress. This does not configure the actual appearance of the animation,
+              which is done using the @keyframes at-rule. The sub-properties of the animation property are:
+            <ul>
+              <li><p style="color:rgb(251, 202, 142)">animation-name</p>Specifies the name of the @keyframes at-rule describing the animation's keyframes.</li>
+              <li><p style="color:rgb(251, 202, 142)">animation-duration</p>Configures the length of time that an animation should take to complete one cycle.</li>
+              <li><p style="color:rgb(251, 202, 142)">animation-timing-function</p>Configures the timing of the animation; that is, how the animation transitions through keyframes, by establishing acceleration curves.</li>
+              <li><p style="color:rgb(251, 202, 142)">animation-delay</p>Configures the delay between the time the element is loaded and the beginning of the animation sequence.</li>
+              <li><p style="color:rgb(251, 202, 142)">animation-iteration-count</p>Configures the number of times the animation should repeat; you can specify infinite to repeat the animation indefinitely.</li>
+              <li><p style="color:rgb(251, 202, 142)">animation-direction</p>Configures whether or not the animation should alternate direction on each run through the sequence or reset to the start point and repeat itself.</li>
+              <li><p style="color:rgb(251, 202, 142)">animation-fill-mode</p>Configures what values are applied by the animation before and after it is executing.</li>
+              <li><p style="color:rgb(251, 202, 142)">animation-play-state</p>Lets you pause and resume the animation sequence.</li>
+            </ul>
+            </p><br><br>
+            <p>
+              Since the timing of the animation is defined in the CSS style that configures the animation, keyframes use a 
+              percentage to indicate the time during the animation sequence at which they take place. 0% indicates the first moment of the animation sequence, while 100% indicates the final state of the animation.
+            </p>
+            <code>div{
+                width:100px;
+                height:100px;
+                position:relative;
+                background:yellow;
+                animation-name: move;
+                animation-timing-function: linear;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+             }
+             @keyframes move{
+              0%{
+             left:0;
+              }
+              50%{
+             left:90vw; 
+              }
+              100%{
+             left:0;
+              }
+             }
+            </code>
+            <p>Output of the above code:</p>
+            <video autoplay loop>
+              <source src="./output.mp4" type="video/mp4">
+            </video>
+          </article>
+        </section>
+        <section class="main-section" id="CSS_FlexBox">
+          <header>CSS FlexBox</header>
+          <article>
+            <p>
+              FlexBox makes it easier to design flexible responsive layout structure without using float or positioning.
+              Flexbox is a one-dimensional layout method for arranging items in rows or columns. Items flex (expand)
+              to fill additional space or shrink to fit into smaller spaces.
+              <br><br>
+              To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of
+              display on the parent element of the elements you want to affect.
+            </p>
+            <code>
+              .flex-container{
+                display: flex;
+                flex-direction: column;
+              }
+            </code>
+            <p>
+              The element we've given a display value of flex to is acting like a block-level element in terms of how it interacts with the rest of the page,
+              but its children are laid out as flex items.
+              <br><br>
+              When elements are laid out as flex items, they are laid out along two axes:
+            </p>
+            <ul>
+              <li>The main axis is the axis running in the direction the flex items are laid out in (for example, as rows across the page, or columns down the page.) The start and end of this axis are called the main start and main end.</li>
+              <li>The cross axis is the axis running perpendicular to the direction the flex items are laid out in. The start and end of this axis are called the cross start and cross end.</li>
+            </ul>
+            <p>
+              Flexbox provides a property called flex-direction that specifies which direction the main axis runs
+              (which direction the flexbox children are laid out in). By default this is set to row.
+              <br>
+              One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children
+              will overflow their container, breaking the layout.
+              <br>
+              One way in which you can fix this is to add the following declaration to your flex-container rule
+            </p>
+            <code>flex-wrap: wrap;</code>
+            <p>
+              Flexbox also has a feature for changing the layout order of flex items without affecting the source order.
+              This is another thing that is impossible to do with traditional layout methods.
+            </p>
+            <ul>
+              <li>By default, all flex items have an order value of 0.</li>
+              <li>Flex items with higher specified order values will appear later in the display order than items with lower order values.</li>
+              <li>Flex items with the same order value will appear in their source order. So if you have four items whose order values have been set as 2, 1, 1, and 0 respectively, their display order would be 4th, 2nd, 3rd, then 1st.</li>
+              <li>The 3rd item appears after the 2nd because it has the same order value and is after it in the source order.</li>
+            </ul>
+            <p>
+              You can read more about <a class="nav-link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">FlexBoxes in detail here</a>.
+            </p> 
+            <br><br>
+            <p id="end">Made With ❤️ by PT</p>
+          </article>
+        </section>
+        
+      </main>
+    
+      <div id="footer">
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="97%" y1="67%" x2="3%" y2="33%"><stop offset="5%" stop-color="#1d1e22ff"></stop><stop offset="95%" stop-color="#52c29dff"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,200 0,200 C 213.5,226.5 427,253 667,253 C 907,253 1173.5,226.5 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+      </div>
+    <script src="script.js"></script>
+    <script>
+      VANTA.WAVES({
+        el: '#getstarted',
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x2b5754,
+        shininess: 32.00
+      })</script>
+</body>
+</html>
