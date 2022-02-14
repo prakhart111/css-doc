@@ -123,16 +123,7 @@ code {
     margin:auto;
   }
 }
-video{
-  width:20%;
-  height:20%;
-  position:relative;
-  left:40%;
-}
-#end{
-  position:relative;
-  left:40%;
-}
+
 li{
   color:rgb(194, 252, 228);
 }
