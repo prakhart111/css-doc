@@ -137,3 +137,25 @@ video{
 li{
   color:rgb(194, 252, 228);
 }
+
+/* Custom Scroll bar*/
+::-webkit-scrollbar{
+  width:1.4em;
+}
+::-webkit-scrollbar-track{
+  background:#1D1E22;
+  border:1px solid #52c29dd2;
+  border-radius:1em;
+  margin:15px;
+}
+::-webkit-scrollbar-thumb{
+  background:#52c29de5;
+  border:1px solid #1D1E22;
+  border-radius:1em;
+}
+/*For firefox*/
+@supports(scrollbar-color:#52c29dd2 #1D1E22){
+  *{scrollbar-color:#52c29dd2 #1D1E22;
+    scrollbar-width:auto;
+  }
+}
